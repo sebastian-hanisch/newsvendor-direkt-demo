@@ -1,7 +1,6 @@
 # Direkt auf den Kosten lernen: Pinball-Verlust und Quantilregression – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-newsvendor-direkt-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-newsvendor-direkt-demo.streamlit.app/)**
 
 Eigenständige Demo der Reihe **entscheidungsorientiert** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Sie importiert nichts aus anderen Demos; der Zufallsstrom (SplitMix64) ist aus `entrollte-netze-demo` kopiert und steht im Modulkopf von `nvd_rng.py`. Vehikel ist der **Newsvendor mit Merkmalen** (Bestellmenge, Kosten je fehlende und je überschüssige Einheit); die Frage ist, ob man die Bestellregel **direkt aus den Kosten lernen** sollte, statt erst die Nachfrage zu prognostizieren.
 
