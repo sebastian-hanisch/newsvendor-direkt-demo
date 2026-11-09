@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest>=8.0
+scikit-learn>=1.3  # nur Orakel-Gegenprobe (tests/test_oracle_newsvendor_direkt.py), nicht Laufzeit

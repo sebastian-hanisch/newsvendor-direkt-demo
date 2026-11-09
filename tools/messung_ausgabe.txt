@@ -1,0 +1,48 @@
+Seeds: 0 bis 29 (30), Testsatz je Seed 2000 Merkmalspunkte, Mehrkosten exakt gegen das wahre Quantil
+== A: Mittel bestellen, Welt linear, p = 3
+  linear           p =  3 n = 1000 tau = 0.5 : Mittel bestellen    0.2 [  0.0,   0.6] | KQ+Quantil    0.1 [  0.0,   0.7] | direkt    0.3 [  0.0,   1.0] | direkt besser in  7/30
+  linear           p =  3 n = 1000 tau = 0.8 : Mittel bestellen   42.8 [ 35.4,  48.7] | KQ+Quantil    0.2 [  0.0,   1.0] | direkt    0.3 [  0.0,   1.7] | direkt besser in 14/30
+  linear           p =  3 n = 1000 tau = 0.95: Mittel bestellen  287.7 [257.4, 311.5] | KQ+Quantil    0.3 [  0.1,   1.0] | direkt    0.9 [  0.1,   3.1] | direkt besser in  4/30
+  linear           p =  3 n =  100 tau = 0.8 : Mittel bestellen   44.2 [ 17.0,  64.7] | KQ+Quantil    2.5 [  0.4,   5.6] | direkt    3.5 [  0.5,  14.1] | direkt besser in  9/30
+  linear           p =  3 n =  100 tau = 0.95: Mittel bestellen  290.9 [173.0, 373.1] | KQ+Quantil    3.0 [  0.5,  10.5] | direkt    9.0 [  1.1,  45.1] | direkt besser in  6/30
+== B (M1): Streuung linear, p = 3
+  streuung-linear  p =  3 n =  100 tau = 0.95: Mittel bestellen  295.2 [166.5, 395.0] | KQ+Quantil   38.0 [ 16.4,  67.7] | direkt   13.3 [  8.7,  44.3] | direkt besser in 27/30
+  streuung-linear  p =  3 n = 1000 tau = 0.95: Mittel bestellen  286.8 [259.3, 324.7] | KQ+Quantil   34.5 [ 30.3,  40.7] | direkt    7.8 [  6.6,   9.3] | direkt besser in 30/30
+  streuung-linear  p =  3 n = 5000 tau = 0.95: Mittel bestellen  288.5 [275.6, 299.2] | KQ+Quantil   33.0 [ 30.5,  36.1] | direkt    7.1 [  6.1,   8.6] | direkt besser in 30/30
+  streuung-linear  p =  3 n = 1000 tau = 0.8 : Mittel bestellen   43.0 [ 36.1,  52.4] | KQ+Quantil   13.3 [  9.6,  16.8] | direkt    1.9 [  1.4,   3.3] | direkt besser in 30/30
+== C (M2): Streuung linear, p = 10
+  streuung-linear  p = 10 n = 1000 tau = 0.95: Mittel bestellen  286.2 [256.6, 321.6] | KQ+Quantil   33.4 [ 28.4,  40.5] | direkt    9.8 [  6.8,  14.5] | direkt besser in 30/30
+  streuung-linear  p = 10 n =  100 tau = 0.95: Mittel bestellen  314.7 [242.0, 439.9] | KQ+Quantil   41.0 [ 20.1,  72.1] | direkt   46.6 [ 16.6,  95.4] | direkt besser in 13/30
+  streuung-linear  p = 10 n =   30 tau = 0.95: Mittel bestellen  359.2 [240.2, 781.9] | KQ+Quantil   54.7 [ 29.7, 334.1] | direkt  185.6 [ 56.9, 554.1] | direkt besser in  0/30
+== D (M3): Welt linear (konstante Streuung)
+  linear           p =  3 n = 1000 tau = 0.95: Mittel bestellen  287.7 [257.4, 311.5] | KQ+Quantil    0.3 [  0.1,   1.0] | direkt    0.9 [  0.1,   3.1] | direkt besser in  4/30
+  linear           p = 10 n =  100 tau = 0.95: Mittel bestellen  304.9 [237.9, 396.5] | KQ+Quantil   12.7 [  3.0,  46.2] | direkt   33.2 [  6.4,  80.8] | direkt besser in  2/30
+  linear           p = 10 n =   30 tau = 0.95: Mittel bestellen  341.1 [218.9, 836.3] | KQ+Quantil   47.3 [ 10.8, 393.6] | direkt  197.9 [ 66.5, 406.5] | direkt besser in  1/30
+  linear           p = 10 n =   30 tau = 0.8 : Mittel bestellen   64.0 [ 34.1, 217.8] | KQ+Quantil   25.7 [  8.5, 152.4] | direkt   42.7 [ 10.5,  96.5] | direkt besser in  7/30
+== E (M4): mit L1-Strafe, p = 10 (lam fest 0,1 und per 5-facher Kreuzvalidierung aus {0, 0,02, 0,05, 0,1, 0,2, 0,5})
+  linear           n =  30 tau = 0.8 : KQ+Quantil   25.7 [  8.5, 152.4] | direkt   42.7 [ 10.5,  96.5] | lam 0,1   46.0 [ 24.8,  63.8] | direkt+CV   36.3 [ 18.9,  67.6] | Median gewähltes lam 0.05
+  linear           n =  30 tau = 0.95: KQ+Quantil   47.3 [ 10.8, 393.6] | direkt  197.9 [ 66.5, 406.5] | lam 0,1   63.6 [ 57.6, 106.3] | direkt+CV   65.7 [ 50.3, 133.6] | Median gewähltes lam 0.10
+  linear           n = 100 tau = 0.8 : KQ+Quantil    7.0 [  3.3,  22.6] | direkt   11.8 [  3.6,  25.0] | lam 0,1   46.2 [ 26.2,  63.2] | direkt+CV   13.1 [  4.1,  31.2] | Median gewähltes lam 0.02
+  linear           n = 100 tau = 0.95: KQ+Quantil   12.7 [  3.0,  46.2] | direkt   33.2 [  6.4,  80.8] | lam 0,1   61.4 [ 57.5,  91.1] | direkt+CV   45.3 [  6.4,  80.8] | Median gewähltes lam 0.02
+  streuung-linear  n =  30 tau = 0.8 : KQ+Quantil   35.7 [ 17.9, 162.0] | direkt   54.4 [ 15.7, 158.0] | lam 0,1   72.3 [ 33.9, 103.3] | direkt+CV   52.0 [ 21.6, 126.7] | Median gewähltes lam 0.05
+  streuung-linear  n =  30 tau = 0.95: KQ+Quantil   54.7 [ 29.7, 334.1] | direkt  185.6 [ 56.9, 554.1] | lam 0,1  105.5 [ 81.6, 177.4] | direkt+CV  106.1 [ 81.6, 177.4] | Median gewähltes lam 0.10
+  streuung-linear  n = 100 tau = 0.8 : KQ+Quantil   18.6 [  7.1,  39.0] | direkt   12.1 [  4.2,  23.1] | lam 0,1   70.5 [ 35.0,  99.9] | direkt+CV   13.9 [  4.2,  23.1] | Median gewähltes lam 0.01
+  streuung-linear  n = 100 tau = 0.95: KQ+Quantil   41.0 [ 20.1,  72.1] | direkt   46.6 [ 16.6,  95.4] | lam 0,1  103.3 [ 81.0, 125.2] | direkt+CV   46.6 [ 16.6, 118.9] | Median gewähltes lam 0.02
+== F (M5): falsche Klasse, p = 3
+  quadratisch      p =  3 n = 1000 tau = 0.95: Mittel bestellen  518.8 [462.3, 590.5] | KQ+Quantil  141.3 [120.2, 158.9] | direkt  143.4 [121.6, 168.0] | direkt besser in  5/30
+  betrag           p =  3 n = 1000 tau = 0.95: Mittel bestellen  291.5 [253.6, 317.1] | KQ+Quantil   19.5 [ 18.7,  21.2] | direkt   20.0 [ 18.4,  23.8] | direkt besser in  7/30
+== G: Raster des Experiments 3 (Median der Differenz direkt minus KQ+Quantil, Zahl der Seeds mit Vorteil für direkt)
+  Welt streuung-linear, tau = 0,95; Spalten n = (30, 100, 300, 1000)
+    p =  1:   -12.1 (25)    -22.4 (30)    -25.3 (30)    -26.6 (30)
+    p =  3:    -4.0 (18)    -22.9 (27)    -23.3 (30)    -26.2 (30)
+    p = 10:   115.6 ( 0)      1.8 (13)    -19.1 (30)    -23.8 (30)
+  Welt linear, tau = 0,95; Spalten n = (30, 100, 300, 1000)
+    p =  1:     5.3 ( 5)      1.0 ( 8)      0.8 (10)      0.2 ( 9)
+    p =  3:    31.4 ( 3)      3.8 ( 6)      1.7 ( 4)      0.3 ( 4)
+    p = 10:   113.4 ( 1)     21.0 ( 2)      7.1 ( 0)      1.7 ( 1)
+== H: KQ + Quantil mit Rangregel (App) gegen linear interpoliertes Quantil (Vormessung), tau = 0,95
+  linear           p = 10 n =   30: Rangregel   47.3 [ 10.8, 393.6] | interpoliert   55.3 [  8.7, 395.0]
+  streuung-linear  p = 10 n =   30: Rangregel   54.7 [ 29.7, 334.1] | interpoliert   62.6 [ 33.7, 341.2]
+  linear           p = 10 n =  100: Rangregel   12.7 [  3.0,  46.2] | interpoliert   12.5 [  3.0,  45.7]
+  streuung-linear  p =  3 n =  100: Rangregel   38.0 [ 16.4,  67.7] | interpoliert   38.0 [ 16.5,  67.7]
+  linear           p =  3 n = 1000: Rangregel    0.3 [  0.1,   1.0] | interpoliert    0.3 [  0.1,   1.0]
