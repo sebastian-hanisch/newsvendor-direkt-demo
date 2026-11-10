@@ -52,7 +52,7 @@ Zusätze, **nicht im Test**: Raster der Welt Streuung linear, p = 10, n = 100 li
 
 ### Befunde und Korrekturen gegenüber dem Plan
 
-Der „Plan“ ist die Vormessung vor dem Bau (`eo_v2_news.py`, `eo_v2b_reg.py` der Planung: 30 Seeds, 20 000 Test-Ziehungen der Nachfrage je Seed, Zufallsstrom von numpy, Quantil der Residuen linear interpoliert). Im Bau gilt die neue Messung; die Aussagen tragen qualitativ alle, einzelne Zahlen und **eine Zelle** weichen ab:
+Der „Plan“ ist die Vormessung vor dem Bau (`eo_v2_news.py`, `eo_v2b_reg.py` der Planung: 30 Seeds, 20 000 Test-Ziehungen der Nachfrage je Seed, Zufallsstrom von numpy, Quantil der Residuen linear interpoliert). Im Bau gilt die neue Messung; die Aussagen gelten qualitativ alle, einzelne Zahlen und **eine Zelle** weichen ab:
 
 | Zelle (Median Mehrkosten in %, KQ+Q gegen direkt) | Plan | Bau |
 |---|---|---|
@@ -158,4 +158,4 @@ Gebaut mit Streamlit, Plotly, NumPy und SciPy (HiGHS).
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Entscheidungsorientiert: Regret bis Wahl](https://sebastianhanisch.net/konzepte-entscheidungsorientiert.html).
